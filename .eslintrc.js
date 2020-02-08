@@ -7,6 +7,14 @@ module.exports = {
     'plugin:react/recommended',
     'standard'
   ],
+  overrides: [{
+    files: ['*.ts', '*.tsx'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': [2, {
+        args: 'none'
+      }]
+    }
+  }],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
