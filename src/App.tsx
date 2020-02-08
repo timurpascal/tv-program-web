@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Layout, Row, Col, Result } from 'antd'
+import { Layout, Row, Col, Result, Button } from 'antd'
 
 import { Selector } from './components/Selector'
 import { List } from './components/List'
@@ -20,6 +20,10 @@ const App = () => {
 
   const changeGroup = (value: string) => {
     setSelectedGroup(value)
+  }
+
+  const updatePage = () => {
+    window.location.reload()
   }
 
   useEffect(() => {
@@ -69,6 +73,7 @@ const App = () => {
           status="500"
           title="500"
           subTitle="Упс... Что то пошло не так. Проверьте соединение с сервером"
+          extra={<Button type="primary" onClick={updatePage}>Обновить</Button>}
         />
       )
       }
