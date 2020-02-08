@@ -7,7 +7,6 @@ interface ListProps {
 }
 
 export const List = ({ cards = [] }: ListProps) => {
-  console.log(cards)
   return (
     <div>
       {cards.map((card, index) => {

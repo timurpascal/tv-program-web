@@ -5,24 +5,30 @@ import { Selector } from './components/Selector'
 import { List } from './components/List'
 
 import { CardInfo } from './interfaces/CardInfo'
+import { Group } from './interfaces/Group'
+
 import { getProgram } from './controllers/Program'
 import { getGroup } from './controllers/Group'
 
 const { Content } = Layout
 
 const App = () => {
-  const [group, setGroup] = useState([])
+  const [group, setGroup] = useState<Array<Group>>([])
   const [selectedGroup, setSelectedGroup] = useState<string>('')
   const [programs, setPrograms] = useState<Array<CardInfo>>([])
-  const [success, setSuccess] = useState(true)
+  const [success, setSuccess] = useState<Boolean>(true)
 
-  const changeGroup = (value: string): void => {
+  const changeGroup = (value: string) => {
     setSelectedGroup(value)
   }
 
   useEffect(() => {
     const updateProgram = async () => {
-      setPrograms(await getProgram(selectedGroup))
+      try {
+        setPrograms(await getProgram(selectedGroup))
+      } catch (err) {
+        setSuccess(false)
+      }
     }
 
     const updateGroup = async () => {
