@@ -2,6 +2,13 @@
   "name": "tv-program-visualazer",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Timur Zakriev",
+    "email": "timur16zakriev@gmail.com"
+  },
+  "bugs": {
+    "email": "timur16zakriev@gmail.com"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -25,6 +32,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "license": "MIT",
   "browserslist": {
     "production": [
       ">0.2%",
