@@ -1,4 +1,4 @@
-## Решение тестового задания
+# Решение тестового задания
 
 [Ссылка на описание тестового задания](https://github.com/potapovnikita/job-frontend-developer-test/blob/master/README.md)
 
